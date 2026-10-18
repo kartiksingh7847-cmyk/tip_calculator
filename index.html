@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="tipcalculator.css" />
+  </head>
+  <body>
+    <header>
+      <p>Tip Calculator</p>
+    </header>
+    <main>
+      <section class="tip-calc-container">
+        <div class="form">
+          <div class="group">
+            <label class="special" for="amount">Amount</label>
+            <input id="amount" type="number" placeholder="Bill amount.."/>
+          </div>
+          <div class="group">
+            <label class="special">TIP : </label>
+            <label for="tip-10">10%</label>
+            <input class="tip" id="tip-10" type="radio" name="tip" value="0.1" />
+            <label for="tip-20">20%</label>
+            <input class="tip" id="tip-20" type="radio" name="tip" value="0.2" />
+            <label for="tip-30">30%</label>
+            <input class="tip" id="tip-30" type="radio" name="tip" value="0.3" />
+            <input id="custom" type="number" placeholder="Custom.." />
+          </div>
+          <button id="calc">Calculate</button>
+        </div>
+        <div class="total special">
+          <p>Bill : 0</p>
+          <p>TIP : 0</p>
+          <p>TOTAL : 0</p>
+        </div>
+        <div class="history">
+          <p>History</p>
+          <hr>
+          <table>
+            <thead>
+              <tr><th>Bill</th><th>TIP</th><th>TOTAL</th><th>Remove</th></tr>
+            </thead>
+            <tbody class="list">
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="tipcalculator.js"></script>
+</html>
